@@ -1,60 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>einna.tr</title>
-    <link rel="stylesheet" href="css/style.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
-</head>
+    @@include('html/head.html', {
+        "title": "einna.tr"
+    })
     <body class="bg-[#e6e6e6]/[.5]">
-        <header class="flex h-[86px] bg-[#34383c]">
-    <div class="flex grow">
-        <img class="ml-[44px] mt-[22px] mb-[20px]" src="img/polygon_3147.png" alt="polygon">
-        <img class="ml-[7px] mt-[23px] mb-[30px]" src="img/einnatr_3137.png" alt="einna.tr">
-    </div>
-    <button class="min-w-[80px]">
-        <img class="m-[20px] opacity-[.54]" src="img/ic_search_3148.png" alt="search">
-    </button>
-    <div class="flex min-w-[286px] bg-[#1e2327]">
-        <div class="flex relative ml-[24px] my-[20px]">
-            <img src="img/base_504.png" alt="avatar">
-            <img class="absolute right-0 top-0" src="img/base_508.png" alt="notonline">
-        </div>
-        <p class="grid place-content-center ml-[19px] h-[86px] name">Dux Nguyen</p>
-        <button>
-            <img class="flex-none mx-[16px] opacity-[.54]" src="img/arrow_515.png" alt="triangle">
-        </button>
-    </div>
-</header>
+        @@include('html/header.html', {})
         <div class="flex">
-            <aside class="bg-[#4d5f84]">
-    <div class="grid grid min-w-[132px]">
-        <a href="index.html" class="pt-[21px] pb-[11px] bg-[#fff]/[.1]">
-            <img class="ml-[48px] mr-[47px]" src="img/ic_dashboard_active.png_2888.png" alt="dashboard">
-            <p class="text-center text-[#fff] sidebar">Dashboard</p>
-        </a>
-        <a href="index.html" class="pt-[18px] pb-[10px] opacity-[.5]">
-            <img class="ml-[48px] mr-[47px] opacity-[1]" src="img/ic_userstudy_inactive.png_2893.png"
-                alt="userstudy">
-            <p class="text-center text-[#fff] sidebar">User Study</p>
-        </a>
-        <a href="index.html" class="pt-[14px] pb-[11px] opacity-[.5]">
-            <img class="ml-[48px] mr-[47px]" src="img/ic_launchstudy_inactive.png_2894.png" alt="launchstudy">
-            <p class="text-center text-[#fff] sidebar">Launch a Study</p>
-        </a>
-        <a href="index.html" class="pt-[16px] pb-[7px] opacity-[.5]">
-            <img class="ml-[52px] mr-[50px]" src="img/ic_viewarchive_inactive.png_2892.png" alt="viewarchive">
-            <p class="text-center text-[#fff] sidebar">View Archive</p>
-        </a>
-        <a href="index.html" class="pt-[14px] pb-[7px] opacity-[.5]">
-            <img class="ml-[50px] mr-[48px]" src="img/ic_account_inactive.png_2895.png" alt="account">
-            <p class="text-center text-[#fff] sidebar">My Account</p>
-        </a>
-    </div>
-</aside>
+            @@include('html/sidebar.html', {
+                "status_Dashboard": "bg-[#fff]/[.1]",
+                "status_User_Study": "opacity-[.5]",
+                "status_Launch_a_Study": "opacity-[.5]",
+                "status_View_Archive": "opacity-[.5]",
+                "status_My_Account": "opacity-[.5]"
+            })
             <main class="w-full">
                 <div class="flex w-full h-[87px] bg-[#fff]">
                     <div class="flex w-full">
@@ -194,7 +152,7 @@
                         <div class="grid grid-cols-1 gap-4 content-evenly m-[20px] pt-[19px] pb-[25px] pr-[37px] bg-[#fff] rounded-[10px] shadow col-span-2 chart">
                             <div class="flex">
                                 <div class="min-w-[80px] relative">
-                                    <img class=" bottom-0 right-[15px] absolute" src="img/ic_technology.png_1040.png" alt="technology">
+                                    <img class=" bottom-0 right-[15px] absolute" src="@img/ic_technology.png_1040.png" alt="technology">
                                 </div>
                                 <div class="min-w-[106px] mr-[40px] mt-[14px] opacity-[.87] text-[18px] font-bold">Technology</div>
                                 <div class="flex flex-initial pb-[10px]">
@@ -208,7 +166,7 @@
                             </div>
                             <div class="flex">
                                 <div class="min-w-[80px] h-[43px] relative">
-                                    <img class=" bottom-0 right-[15px] absolute" src="img/ic_accessibility.png_2898.png" alt="accessibility">
+                                    <img class=" bottom-0 right-[15px] absolute" src="@img/ic_accessibility.png_2898.png" alt="accessibility">
                                 </div>
                                 <div class="min-w-[106px] mr-[40px] mt-[14px] opacity-[.87] text-[18px] font-bold">Accessibility</div>
                                 <div class="flex flex-initial pb-[10px]">
@@ -222,7 +180,7 @@
                             </div>
                             <div class="flex">
                                 <div class="min-w-[80px] h-[43px] relative">
-                                    <img class=" bottom-0 right-[17px] absolute" src="img/ic_security.png_1064.png" alt="security">
+                                    <img class=" bottom-0 right-[17px] absolute" src="@img/ic_security.png_1064.png" alt="security">
                                 </div>
                                 <div class="min-w-[106px] mr-[40px] mt-[14px] opacity-[.87] text-[18px] font-bold">Security</div>
                                 <div class="flex flex-initial pb-[10px]">
